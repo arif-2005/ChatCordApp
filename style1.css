@@ -4,7 +4,7 @@ body{
   /*background-color:black;*/
   overflow-y:none;
   height:100%;
-  background-image: url('/media/img/bg.png');
+  background-image: url('./bg.png');
   background-size: cover;
   /*background-repeat: no-repeat;*/
 }
@@ -37,7 +37,7 @@ body{
   border-radius:50%;
   position:absolute;
   left:50px;
-  background-image: url('/media/img/victim/1.jpg');
+  background-image: url('./favicon.ico');
   background-size: cover;
   background-repeat: no-repeat;
 }
