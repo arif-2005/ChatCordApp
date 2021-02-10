@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SPI LAB GROUP</title>
+  <link rel="shortcut icon" href="./media/img/favicon.ico">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <!-- Meta tags -->
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="THE SPI LAB GROUP" />
+  <meta property="og:description" content="" />
+  <meta property="og:url" content="http://127.0.0.1:5000/"/>
+  <meta property="og:site_name" content="SPI LAB" />
+  <meta property="article:modified_time" content="" />
+  <meta property="og:image" content="/static/media/img/favicon.ico" />
+
+  <!-- StyleSheet Links -->
+  <link rel="Stylesheet" href="./css/style1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body id="body">
+  <div id="chatcordChat">
+    <div id="chatHead">
+	<i id="backToHome" class="fa fa-arrow-circle-left"></i>
+	<div id="chatUserDP"></div>
+	<div id="chatUserMeta">
+		<h3 id="chatUser">Examen</h3>
+		<p id="chatUserStats">0 people online</p>
+	</div>
+	<!--<div id="chatRHS">
+	  <i class="fa fa-video-alt"></i>
+	  <i class="fa fa-phone"></i>
+	  <i class="fa fa-video"></i>
+	</div>-->
+    </div>
+    <hr class="hr1">
+    <!-- chat body -->
+    <div id="mainChatBody">
+	<!-- my message -->
+      <!--<div class="myChat">
+	  <h5 class="chatVictim"><b>You</b></h5>
+	  <div class="chatMessage"><p>Hello Rohit!!!</p></div>
+	  <p class="chatTime">12:30 AM</p>
+	</div>-->
+	<!--others message-->
+	<!--<div class="othersChat">
+	  <h5 class="chatVictim"><b>Rohit</b></h5>
+	  <div class="chatMessage"><p>Hello Arif!!!How are you..are you doing great!</p></div>
+	  <p class="chatTime">12:31 AM</p>
+	</div>-->
+
+
+    </div>
+
+    <!-- input -->
+    <div id="chatMain">
+    <div id="chatInput">
+	<i id="emoji" class="fa fa-smile-o"></i>
+	<textarea rows='1' name="chatInputText" type="text" id="chatInputText" placeholder="Type a message..." onfocus="InputFocus()" onblur="InputBlur()"></textarea>
+	<button id="chatSendMsg" onclick=""><i class="fa fa-paperclip"></i></button>
+	<button id="chatSendMsg" onclick="getImageBtn()"><i class="fa fa-camera"></i></button>
+	<input type="file" accept="image/*" id="get-image" style="display:none;" onchange="encodeImageFileAsURL(this)"/>
+	<button id="chatSendMsg" onclick="sendData()"><i class="fa fa-send"></i></button>
+    </div>
+    </div>
+
+
+  </div>
+  
+  <footer id="footer">
+      Powered By The <a href="https://www.google.com">SPI LAB</a>
+  </footer>
+  
+  
+
+
+
+
+
+
+  <script src="./js/Jquiry.js"></script>
+  <script src="./js/main1.js"></script>
+</body>
+</html>

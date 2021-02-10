@@ -1,0 +1,174 @@
+
+*{margin:0px;padding:0px;color:white;}
+body{
+  /*background-color:black;*/
+  overflow-y:none;
+  height:100%;
+  background-image: url('/media/img/bg.png');
+  background-size: cover;
+  /*background-repeat: no-repeat;*/
+}
+
+.hr1{border:none;color:white;background-color:white;height:1px;}
+
+#chatcordChat{
+  height:100%;
+  width:100%;
+  background-color:transparent;
+}
+#chatHead{
+  height:55px;
+}
+#backToHome{
+  height:50px;
+  width:50px;
+  font-size:35px;
+  padding-top:7.5px;
+  padding-bottom:0px;
+  padding-left:7.5px;
+  padding-right:0px;
+  position:absolute;
+}
+#chatUserDP{
+  width:40px;
+  height:40px;
+  margin:5px;
+  background:gray;
+  border-radius:50%;
+  position:absolute;
+  left:50px;
+  background-image: url('/media/img/victim/1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#victimImg{
+    height:100%;
+}
+#chatUserMeta{
+  position:absolute;
+  padding-top: 3px;
+  left:100px;
+  height:50px;
+}
+#chatUser{
+
+}
+#chatUserStats{
+
+}
+#chatRHS{
+  float:right;
+  font-size:35px;
+}
+#chatRHS i{
+  width:0;
+}
+
+
+/* chat body */
+#mainChatBody{
+  height:74vh;
+  overflow-y:auto;
+  position: relative;
+  width:100vw;
+}
+.myChat{
+  margin:5px;
+  border:1px solid white;
+  border-radius:5px;
+  padding:5px;
+  max-width:70%;
+  min-width:40%;
+  float:right;
+  clear:both;
+}
+.othersChat{
+  margin:5px;
+  border:1px solid white;
+  border-radius:5px;
+  padding:5px;
+  max-width:70%;
+  min-width:40%;
+  float:left;
+  clear:both;
+}
+.chatVictim{
+
+}
+.chatMessage{
+  overflow-wrap:break-word;
+}
+.chatTime{
+  font-size:10px;
+  /*float:right;*/
+  text-align:right;
+}
+.chatMessage img{
+  width:100%;
+}
+.botchat{
+  margin:10px 40px;
+  padding:2px 8px;
+  border:1px solid white;
+  border-radius:5px;
+  background:#000;
+  opacity:60%;
+  clear:both;
+}
+.botchat h5{display:none;}
+
+
+
+/* Send messages */
+#chatMain{
+    position: relative;
+    height: 11vh;
+}
+#chatInput{
+  padding:3.5vw;
+  border:none;
+  border-radius:50px;
+  background:black;
+  color:white;
+  font-size:20px;
+  position: absolute;
+  bottom: 2px;
+  width:93vw;
+}
+#emoji{
+    width:9%;
+}
+#chatInputText{
+  color:white;
+  width:54%;
+  font-size:15px;
+  border:none;
+  background:transparent;
+  outline:none;
+  background:transparent;
+  min-height:18px;
+  max-height:100px;
+  resize:none;
+  position:static;
+}
+#chatSendMsg{
+  background-color:transparent;
+  border:none;
+  width:9%;
+  font-size:16px;
+  outline:none;
+  position: relative;
+}
+#footer{
+    height: 6vh;
+    background-color: black;
+    opacity: 70%;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    padding-top: 15px;
+    padding-bottom: -5px;
+}
+#footer a{
+    text-decoration: none;
+}
