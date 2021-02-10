@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SPI LAB GROUP</title>
+  <link rel="shortcut icon" href="./media/img/favicon.ico">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <!-- Meta tags -->
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="THE SPI LAB GROUP" />
+  <meta property="og:description" content="" />
+  <meta property="og:url" content="http://127.0.0.1:5000/"/>
+  <meta property="og:site_name" content="SPI LAB" />
+  <meta property="article:modified_time" content="" />
+  <meta property="og:image" content="/static/media/img/favicon.ico" />
+
+  <!-- StyleSheet Links -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    
+*{margin:0px;padding:0px;color:white;}
+body{
+  /*background-color:black;*/
+  overflow-y:none;
+  height:100%;
+  background-image: url('/media/img/bg.png');
+  background-size: cover;
+  /*background-repeat: no-repeat;*/
+}
+
+.hr1{border:none;color:white;background-color:white;height:1px;}
+
+#chatcordChat{
+  height:100%;
+  width:100%;
+  background-color:transparent;
+}
+#chatHead{
+  height:55px;
+}
+#backToHome{
+  height:50px;
+  width:50px;
+  font-size:35px;
+  padding-top:7.5px;
+  padding-bottom:0px;
+  padding-left:7.5px;
+  padding-right:0px;
+  position:absolute;
+}
+#chatUserDP{
+  width:40px;
+  height:40px;
+  margin:5px;
+  background:gray;
+  border-radius:50%;
+  position:absolute;
+  left:50px;
+  background-image: url('/media/img/victim/1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#victimImg{
+    height:100%;
+}
+#chatUserMeta{
+  position:absolute;
+  padding-top: 3px;
+  left:100px;
+  height:50px;
+}
+#chatUser{
+
+}
+#chatUserStats{
+
+}
+#chatRHS{
+  float:right;
+  font-size:35px;
+}
+#chatRHS i{
+  width:0;
+}
+
+
+/* chat body */
+#mainChatBody{
+  height:74vh;
+  overflow-y:auto;
+  position: relative;
+  width:100vw;
+}
+.myChat{
+  margin:5px;
+  border:1px solid white;
+  border-radius:5px;
+  padding:5px;
+  max-width:70%;
+  min-width:40%;
+  float:right;
+  clear:both;
+}
+.othersChat{
+  margin:5px;
+  border:1px solid white;
+  border-radius:5px;
+  padding:5px;
+  max-width:70%;
+  min-width:40%;
+  float:left;
+  clear:both;
+}
+.chatVictim{
+
+}
+.chatMessage{
+  overflow-wrap:break-word;
+}
+.chatTime{
+  font-size:10px;
+  /*float:right;*/
+  text-align:right;
+}
+.chatMessage img{
+  width:100%;
+}
+.botchat{
+  margin:10px 40px;
+  padding:2px 8px;
+  border:1px solid white;
+  border-radius:5px;
+  background:#000;
+  opacity:60%;
+  clear:both;
+}
+.botchat h5{display:none;}
+
+
+
+/* Send messages */
+#chatMain{
+    position: relative;
+    height: 11vh;
+}
+#chatInput{
+  padding:3.5vw;
+  border:none;
+  border-radius:50px;
+  background:black;
+  color:white;
+  font-size:20px;
+  position: absolute;
+  bottom: 2px;
+  width:93vw;
+}
+#emoji{
+    width:9%;
+}
+#chatInputText{
+  color:white;
+  width:54%;
+  font-size:15px;
+  border:none;
+  background:transparent;
+  outline:none;
+  background:transparent;
+  min-height:18px;
+  max-height:100px;
+  resize:none;
+  position:static;
+}
+#chatSendMsg{
+  background-color:transparent;
+  border:none;
+  width:9%;
+  font-size:16px;
+  outline:none;
+  position: relative;
+}
+#footer{
+    height: 6vh;
+    background-color: black;
+    opacity: 70%;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    padding-top: 15px;
+    padding-bottom: -5px;
+}
+#footer a{
+    text-decoration: none;
+}
+
+    
+</style>
+
+
+</head>
+<body id="body">
+  <div id="chatcordChat">
+    <div id="chatHead">
+	<i id="backToHome" class="fa fa-arrow-circle-left"></i>
+	<div id="chatUserDP"></div>
+	<div id="chatUserMeta">
+		<h3 id="chatUser">Examen</h3>
+		<p id="chatUserStats">0 people online</p>
+	</div>
+	<!--<div id="chatRHS">
+	  <i class="fa fa-video-alt"></i>
+	  <i class="fa fa-phone"></i>
+	  <i class="fa fa-video"></i>
+	</div>-->
+    </div>
+    <hr class="hr1">
+    <!-- chat body -->
+    <div id="mainChatBody">
+	<!-- my message -->
+      <!--<div class="myChat">
+	  <h5 class="chatVictim"><b>You</b></h5>
+	  <div class="chatMessage"><p>Hello Rohit!!!</p></div>
+	  <p class="chatTime">12:30 AM</p>
+	</div>-->
+	<!--others message-->
+	<!--<div class="othersChat">
+	  <h5 class="chatVictim"><b>Rohit</b></h5>
+	  <div class="chatMessage"><p>Hello Arif!!!How are you..are you doing great!</p></div>
+	  <p class="chatTime">12:31 AM</p>
+	</div>-->
+
+
+    </div>
+
+    <!-- input -->
+    <div id="chatMain">
+    <div id="chatInput">
+	<i id="emoji" class="fa fa-smile-o"></i>
+	<textarea rows='1' name="chatInputText" type="text" id="chatInputText" placeholder="Type a message..." onfocus="InputFocus()" onblur="InputBlur()"></textarea>
+	<button id="chatSendMsg" onclick=""><i class="fa fa-paperclip"></i></button>
+	<button id="chatSendMsg" onclick="getImageBtn()"><i class="fa fa-camera"></i></button>
+	<input type="file" accept="image/*" id="get-image" style="display:none;" onchange="encodeImageFileAsURL(this)"/>
+	<button id="chatSendMsg" onclick="sendData()"><i class="fa fa-send"></i></button>
+    </div>
+    </div>
+
+
+  </div>
+  
+  <footer id="footer">
+      Powered By The <a href="https://www.google.com">SPI LAB</a>
+  </footer>
+  
+  
+
+
+
+
+
+
+  <script src="./js/Jquiry.js"></script>
+  <script>
+      var websocket = new WebSocket("ws://127.0.0.1:6789/");
+const chatMessages = document.querySelector('#mainChatBody');
+const body = document.querySelector('#chatcordChat');
+var uname = prompt("Your name:");
+var chatInputText = document.getElementById("chatInputText");
+var available_user = document.getElementById("chatUserStats");
+
+chatMessages.scrollTop = chatMessages.scrollHeight;
+//send greets message to the server
+websocket.onopen = function(evt) { onOpen(evt) };
+function onOpen(evt)
+  {
+    //websocket.onmessage = function(r){web = Json.parse(e.data);webid =data.webid}
+    websocket.send(JSON.stringify({username:uname,roomId:"15",message:"™™~π™™",time:"",msgType:"text"}));
+}
+//send message to the server
+function sendData() {
+  // Get text Message from dom
+  let msg = document.getElementById("chatInputText").value;
+  msg = msg.trim();
+  document.getElementById("chatInputText").value = "";
+  document.getElementById("chatInputText").focus();
+  document.getElementById("chatInputText").style.height='18px';
+  if (msg != ""){
+    websocket.send(JSON.stringify({username:uname,roomId:"15",message:msg,time:"",msgType:"text"}));
+  console.log("Message sent: " + msg)
+  }
+}
+
+function InputFocus() {
+    document.getElementById('footer').style.display="none";
+chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+function InputBlur() {
+    console.log("InputBlur")
+    document.getElementById('footer').style.display="block";
+}
+
+// receive message from the server
+websocket.onmessage = function (event) {
+      //data = JSON.parse(event.data);
+  data = JSON.parse(event.data);
+      console.log(data);
+      available_user.innerText = data.available_user + " Users Online";
+  addmessage();
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+  //<div class="othersChat">
+	  //<h5 class="chatVictim"><b>Rohit</b></h5>
+	  //<div class="chatMessage"><p>Hello Arif!!!How are you..are you doing great!</p></div>
+	  //<p class="chatTime">12:31 AM</p>
+  //</div>
+
+function addmessage(){
+  if (data.username == uname){
+    chatclass = "myChat";
+    chatuname = "You";
+  } else {
+    chatclass = "othersChat";
+    chatuname = data.username;
+  }
+  if (data.username == "ChatCord"){
+    chatclass = "botchat";
+    chatuname = data.username;
+  }
+  const div = document.createElement('div');
+  div.classList.add(chatclass);
+
+  const h5 = document.createElement('h5');
+  h5.classList.add('chatVictim');
+
+  const b = document.createElement('b');
+  b.innerText = chatuname;
+
+  h5.appendChild(b);
+
+  const messageDiv = document.createElement('div');
+  messageDiv.classList.add('chatMessage');
+
+  if (data.msgType == "text"){
+  const getmessage = document.createElement('p');
+  getmessage.innerText = data.message;
+
+  messageDiv.appendChild(getmessage);
+  }
+  if (data.msgType == "img"){
+  const getmessage = document.createElement('img');
+  getmessage.setAttribute("src",data.message)
+
+  messageDiv.appendChild(getmessage);
+  }
+  if (data.msgType == "video"){
+  const getmessage = document.createElement('p');
+  getmessage.innerText = data.message;
+
+  messageDiv.appendChild(getmessage);
+  }
+
+  const chattime = document.createElement('p');
+  chattime.classList.add('chatTime');
+  chattime.innerText = data.time;
+
+  div.appendChild(h5);
+  div.appendChild(messageDiv);
+  div.appendChild(chattime);
+  document.querySelector('#mainChatBody').appendChild(div)
+
+
+}
+
+
+
+
+
+//Textarea resizing
+function expandTextarea(id) {
+    document.getElementById(id).addEventListener('keyup', function() {
+        this.style.overflow = 'auto';
+        this.style.height = 0;
+        this.style.height = this.scrollHeight + 'px';
+        $('body').scrollTop = '100px';//body.scrollHeight;
+    }, false);
+}
+expandTextarea('chatInputText');
+
+
+
+
+function getImageBtn(){
+    document.getElementById("get-image").click();
+}
+// Get Image from the dom
+var imagebase64 = "";  
+function encodeImageFileAsURL(element) {  
+    var file = element.files[0];  
+    var reader = new FileReader();  
+    reader.onloadend = function() {  
+        imagebase64 = reader.result;  
+        console.log(imagebase64);
+        websocket.send(JSON.stringify({username:uname,roomId:"15",message:imagebase64,time:"",msgType:"img"}));
+
+    }  
+    reader.readAsDataURL(file);  
+}  
+      
+  </script>
+</body>
+</html>
